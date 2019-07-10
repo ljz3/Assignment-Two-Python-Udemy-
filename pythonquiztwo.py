@@ -9,8 +9,15 @@ name_list = ["Kevin", "Haydn", "Seth", "Pierce", "Youssef"]
 
 def print_names():
     for index in range(len(name_list)):
-        print(name_list[index])
+        if "n" in name_list[index] or "N" in name_list[index]:
+            print(name_list[index] + " Contains n")
 
+        if len(name_list[index])>5:
+            print(name_list[index])
+
+    print("-" * 40)
+    while len(name_list)>0:
+        print(name_list.pop())
 
 print_names()
 input()
